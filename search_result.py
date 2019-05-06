@@ -1,12 +1,14 @@
+#insert your Access Key and token
+
 import oauth2
 import sys
 import json
 
-access_token='146310978-voHSB6Bj0s5TK7GphB5kg0VNAmpN1Ql0JDhtJCwK'
-secret_token='PveLHK2vHZNqnsctaRarYojixlFplpqtZRr3nwq9qBBLi'
+access_token='********' #enter access token here
+secret_token='********' #enter access token secret here
 
 def oauth_req(url, key, secret, http_method="GET", post_body=b"", http_headers=None):
-    consumer = oauth2.Consumer(key="zrTLMEIamYi5bLfTakfq9JTmQ", secret="cLvreIFRzwtgkrFnGKkc0UYF8CC33wbCVFMw0lJR0vi8YHtJLS")
+    consumer = oauth2.Consumer(key="***********", secret="**********")    #enter API key and secret key
     token = oauth2.Token(key=key, secret=secret)
     client = oauth2.Client(consumer, token)
     resp, content = client.request( url, method=http_method, body=post_body, headers=http_headers )
